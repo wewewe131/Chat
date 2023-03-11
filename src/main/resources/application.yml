@@ -3,16 +3,28 @@ spring:
     user:
       name: admin
       password: admin
+
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/chat
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
-
+  devtools:
+    remote:
+      restart:
+        enabled: true
+  data:
+    redis:
+      host: localhost #redis地址
+      port: 6379 #redis端口
+      database: 0 #redis数据库
+      timeout: 10000 #redis超时时间
 server:
   servlet:
     context-path: /api
+
 
 mybatis-plus:
   global-config:
@@ -26,4 +38,11 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
 
+jwt-key: acd #加密盐值
+token-expired-in: 86400000 #token过期时间
