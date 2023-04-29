@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.firstdemo.Mapper.RequestApplyMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.firstdemo.Entity.RequestApply">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="userIdRequest" column="user_id_request" jdbcType="VARCHAR"/>
+            <result property="receiveId" column="receive_id" jdbcType="VARCHAR"/>
+            <result property="type" column="type" jdbcType="VARCHAR"/>
+            <result property="mark" column="mark" jdbcType="VARCHAR"/>
+            <result property="isAccept" column="is_accept" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="isDel" column="is_del" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id_request,receive_id,
+        type,mark,is_accept,
+        create_time,is_del
+    </sql>
+</mapper>

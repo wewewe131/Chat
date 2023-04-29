@@ -9,11 +9,5 @@ import org.springframework.data.redis.support.collections.RedisCollectionFactory
 @Configuration
 public class RedisConfig {
 
-    @Bean
-public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
-        RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
-        redisTemplate.setConnectionFactory(redisConnectionFactory);
-        return redisTemplate;
-    }
 
 }

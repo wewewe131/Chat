@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.firstdemo.Mapper.ChatUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.firstdemo.Entity.ChatUser">
+            <id property="uid" column="uid" jdbcType="VARCHAR"/>
+            <result property="uname" column="uname" jdbcType="VARCHAR"/>
+            <result property="uavatar" column="uavatar" jdbcType="VARCHAR"/>
+            <result property="usex" column="usex" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="isDel" column="is_del" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        uid,uname,uavatar
+        ,usex,create_time,
+        update_time,status,is_del
+    </sql>
+</mapper>

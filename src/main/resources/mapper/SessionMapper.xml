@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.firstdemo.Mapper.SessionMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.firstdemo.Entity.Session">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="lastMessage" column="last_message" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="receiveId" column="receive_id" jdbcType="INTEGER"/>
+            <result property="receiveName" column="receive_name" jdbcType="VARCHAR"/>
+            <result property="sessionType" column="session_type" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,message_id,last_message,
+        user_id,receive_id,receive_name,
+        session_type,create_time
+    </sql>
+</mapper>

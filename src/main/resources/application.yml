@@ -7,7 +7,7 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/chat
+    url: jdbc:mysql://localhost:3306/chat?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
@@ -46,3 +46,5 @@ logging:
 
 jwt-key: acd #加密盐值
 token-expired-in: 86400000 #token过期时间
+
+filepath: D:/chat/file/ #文件上传路径

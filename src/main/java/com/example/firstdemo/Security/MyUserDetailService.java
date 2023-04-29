@@ -27,21 +27,18 @@ public class MyUserDetailService implements UserDetailsService {
       private final UpasswordService upasswordService;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        ChatUser uname = chatUserService.getOne(
-                new QueryWrapper<ChatUser>().eq("uname", username)
-        );
-
+    public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
+        ChatUser uname = chatUserService.getById(userId);
         if (Objects.isNull(uname) ||uname.getUid().isBlank())
             throw new UsernameNotFoundException("用户不存在");
-
         UserDetail userDetail = new UserDetail();
         BeanUtils.copyProperties(uname,userDetail);
         Upassword uid = upasswordService.getOne(new QueryWrapper<Upassword>().eq("uid", uname.getUid()));
         userDetail.setPassword(uid.getUpassword());
+
         ArrayList<String> roles = new ArrayList<>();
-        roles.add("ROLE_USER");
         userDetail.setRoles(roles);
+
         return userDetail;
     }
 }

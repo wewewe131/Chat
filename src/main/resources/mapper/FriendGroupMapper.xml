@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.firstdemo.Mapper.FriendGroupMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.firstdemo.Entity.FriendGroup">
+            <result property="uid" column="uid" jdbcType="INTEGER"/>
+            <result property="groupname" column="groupName" jdbcType="VARCHAR"/>
+            <result property="isDel" column="is_del" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        uid,groupName,is_del
+    </sql>
+</mapper>

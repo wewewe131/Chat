@@ -17,8 +17,7 @@ public class RegisterVo extends ChatUser {
     //父类不能为空
     @NotBlank(message = "用户名不能为空")
     private String uname;
-    @NotBlank(message = "邮箱不能为空")
-    private String uemail;
+
     @NotBlank(message = "性别不能为空")
     private String usex;
 

@@ -18,6 +18,7 @@ public class AuthConfig {
     private final MyUserDetailService userDetailsService;
 
     private final MD5PasswordEncoder PasswordEncoder;
+    // 注入自定义的UserDetailsService 和 PasswordEncoder
     @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
@@ -25,7 +26,9 @@ public class AuthConfig {
         daoAuthenticationProvider.setUserDetailsService(userDetailsService);
         return daoAuthenticationProvider;
     }
+
     @Bean
+
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
     }

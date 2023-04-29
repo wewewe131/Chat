@@ -5,7 +5,6 @@ import com.auth0.jwt.algorithms.Algorithm;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import java.time.Instant;
 import java.util.Calendar;
 import java.util.Date;
 @Component
@@ -36,7 +35,7 @@ public class JWTProcess {
                 .sign(algorithm);
     }
 
-    public static String verifyJWT(String token) {
+    public static String verifyJWTGetId(String token) {
         Algorithm algorithm = Algorithm.HMAC256(secret);
         return JWT.require(algorithm)
                 .build()

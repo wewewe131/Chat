@@ -12,6 +12,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoginVo implements Serializable {
-    private String username;
+    private String userId;
     private String password;
 }
