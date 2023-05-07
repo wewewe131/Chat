@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.firstdemo.Mapper.GroupUserInfoMapper">
 
-    <resultMap id="BaseResultMap" type="com.example.firstdemo.Entity.GroupUserInfo">
+    <resultMap id="BaseResultMap" type="com.example.Chat.Entity.GroupUserInfo">
             <result property="groupid" column="groupid" jdbcType="BIGINT"/>
             <result property="groupName" column="group_name" jdbcType="VARCHAR"/>
             <result property="uid" column="uid" jdbcType="BIGINT"/>

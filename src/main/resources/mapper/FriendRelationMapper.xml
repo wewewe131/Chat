@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.firstdemo.Mapper.FriendRelationMapper">
 
-    <resultMap id="BaseResultMap" type="com.example.firstdemo.Entity.FriendRelation">
+    <resultMap id="BaseResultMap" type="com.example.Chat.Entity.FriendRelation">
             <id property="id" column="id" jdbcType="INTEGER"/>
             <result property="userIdMaster" column="user_id_master" jdbcType="VARCHAR"/>
             <result property="userIdFriend" column="user_id_friend" jdbcType="VARCHAR"/>

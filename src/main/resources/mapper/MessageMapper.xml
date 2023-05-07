@@ -4,18 +4,19 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.firstdemo.Mapper.MessageMapper">
 
-    <resultMap id="BaseResultMap" type="com.example.firstdemo.Entity.Message">
+    <resultMap id="BaseResultMap" type="com.example.Chat.Entity.Message">
             <id property="messageId" column="message_id" jdbcType="VARCHAR"/>
+            <result property="sendUserAvatar" column="send_user_avatar" jdbcType="VARCHAR"/>
             <result property="message" column="message" jdbcType="VARCHAR"/>
             <result property="sendUser" column="send_user" jdbcType="VARCHAR"/>
-            <result property="receiveId" column="receive_id" jdbcType="INTEGER"/>
-            <result property="type" column="type" jdbcType="VARCHAR"/>
+            <result property="sendUserId" column="send_user_id" jdbcType="INTEGER"/>
+            <result property="sessionId" column="session_id" jdbcType="VARCHAR"/>
             <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        message_id,message,send_user,
-        send_user_id,receive_id,type,
+        message_id,send_user_avatar,message,
+        send_user,send_user_id,session_id,
         create_time
     </sql>
 </mapper>

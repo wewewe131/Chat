@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.firstdemo.Mapper.RequestApplyMapper">
 
-    <resultMap id="BaseResultMap" type="com.example.firstdemo.Entity.RequestApply">
+    <resultMap id="BaseResultMap" type="com.example.Chat.Entity.RequestApply">
             <id property="id" column="id" jdbcType="INTEGER"/>
             <result property="userIdRequest" column="user_id_request" jdbcType="VARCHAR"/>
             <result property="receiveId" column="receive_id" jdbcType="VARCHAR"/>

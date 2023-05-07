@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.firstdemo.Mapper.AuthMapper">
 
-    <resultMap id="BaseResultMap" type="com.example.firstdemo.Entity.Auth">
+    <resultMap id="BaseResultMap" type="com.example.Chat.Entity.Auth">
             <id property="authId" column="auth_id" jdbcType="VARCHAR"/>
             <result property="authName" column="auth_name" jdbcType="VARCHAR"/>
             <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
